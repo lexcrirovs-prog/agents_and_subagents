@@ -1,0 +1,52 @@
+[
+  {
+    "name": "marketing",
+    "public_name": "Отдел маркетинга",
+    "telegram_token": "env:DUCTOR_AGENT_MARKETING_TELEGRAM_TOKEN",
+    "allowed_user_ids": [],
+    "allowed_group_ids": [],
+    "provider": "codex",
+    "model": "gpt-5.4",
+    "reasoning_effort": "high"
+  },
+  {
+    "name": "legal",
+    "public_name": "Юрист",
+    "telegram_token": "env:DUCTOR_AGENT_LEGAL_TELEGRAM_TOKEN",
+    "allowed_user_ids": [],
+    "allowed_group_ids": [],
+    "provider": "codex",
+    "model": "gpt-5.4",
+    "reasoning_effort": "high"
+  },
+  {
+    "name": "technical-director",
+    "public_name": "Технический директор",
+    "telegram_token": "env:DUCTOR_AGENT_TECHNICAL_DIRECTOR_TELEGRAM_TOKEN",
+    "allowed_user_ids": [],
+    "allowed_group_ids": [],
+    "provider": "codex",
+    "model": "gpt-5.4",
+    "reasoning_effort": "high"
+  },
+  {
+    "name": "production",
+    "public_name": "Производство",
+    "telegram_token": "env:DUCTOR_AGENT_PRODUCTION_TELEGRAM_TOKEN",
+    "allowed_user_ids": [],
+    "allowed_group_ids": [],
+    "provider": "codex",
+    "model": "gpt-5.4",
+    "reasoning_effort": "high"
+  },
+  {
+    "name": "sales-lead",
+    "public_name": "Руководитель отдела продаж",
+    "telegram_token": "env:DUCTOR_AGENT_SALES_LEAD_TELEGRAM_TOKEN",
+    "allowed_user_ids": [],
+    "allowed_group_ids": [],
+    "provider": "codex",
+    "model": "gpt-5.4",
+    "reasoning_effort": "high"
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "name": "marketing",
+      "public_name": "Отдел маркетинга",
+      "role_title": "маркетинг, контент и публикации",
+      "role_summary": "Изучает стиль Telegram, MAX, YouTube и сайта, готовит публикации и помогает планировать отправку сообщений по расписанию.",
+      "description": "Маркетинг: анализирует контентные источники, пишет тексты в стиле владельца и готовит расписание публикаций для Telegram/MAX.",
+      "telegram_token_env": "DUCTOR_AGENT_MARKETING_TELEGRAM_TOKEN",
+      "provider": "codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "name": "legal",
+      "public_name": "Юрист",
+      "role_title": "договоры, риски и гражданское право",
+      "role_summary": "Проверяет договоры на соответствие Гражданскому кодексу РФ, выявляет риски и защищает интересы организации.",
+      "description": "Юрист: делает договорную экспертизу, отмечает спорные условия, предлагает правки и вопросы для согласования.",
+      "telegram_token_env": "DUCTOR_AGENT_LEGAL_TELEGRAM_TOKEN",
+      "provider": "codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "name": "technical-director",
+      "public_name": "Технический директор",
+      "role_title": "техническая база, котлы и нормативная документация",
+      "role_summary": "Работает с базой знаний NotebookLM/RAG, нормативной документацией, чатами, перепиской с конструкторами, комплектациями и сдачей котельных объектов.",
+      "description": "Технический директор: отвечает за техническую экспертизу по паровым котлам, комплектациям, нормативке и вводу объектов в эксплуатацию.",
+      "telegram_token_env": "DUCTOR_AGENT_TECHNICAL_DIRECTOR_TELEGRAM_TOKEN",
+      "provider": "codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "name": "production",
+      "public_name": "Производство",
+      "role_title": "производственный поток, склад и узкие места",
+      "role_summary": "Анализирует файл состояния производства котлов, этапы, складские остатки и узкие места, влияющие на скорость выпуска.",
+      "description": "Производство: принимает производственные файлы, строит картину прохождения этапов и предлагает, что исправить для ускорения выпуска.",
+      "telegram_token_env": "DUCTOR_AGENT_PRODUCTION_TELEGRAM_TOKEN",
+      "provider": "codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "name": "sales-lead",
+      "public_name": "Руководитель отдела продаж",
+      "role_title": "качество звонков, скрипты и рекомендации продавцам",
+      "role_summary": "Ежедневно готовит выгрузку звонков из облачного сервиса Билайн, использует транскрибацию и оценивает разговоры отдела продаж по скриптам.",
+      "description": "Руководитель отдела продаж: выгружает звонки, передает их в транскрибацию, оценивает соблюдение скриптов и готовит рекомендации менеджерам.",
+      "telegram_token_env": "DUCTOR_AGENT_SALES_LEAD_TELEGRAM_TOKEN",
+      "provider": "codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    }
+  ]
+}

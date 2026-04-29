@@ -1,0 +1,11 @@
+{
+  "name": "technical-director-knowledge",
+  "skill_id": "technical-director-knowledge",
+  "owner": "technical-director",
+  "status": "active",
+  "summary": "Работа с технической базой знаний, нормативкой, котлами, комплектациями и сдачей объектов.",
+  "triggers": ["котел", "котёл", "норматив", "notebooklm", "комплектация", "сдача объекта", "технический директор"],
+  "dependencies": ["enterprise-collaboration"],
+  "created_at": "2026-04-29",
+  "updated_at": "2026-04-29"
+}

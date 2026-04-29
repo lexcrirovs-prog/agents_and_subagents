@@ -1,0 +1,11 @@
+{
+  "name": "production-bottleneck-analysis",
+  "skill_id": "production-bottleneck-analysis",
+  "owner": "production",
+  "status": "active",
+  "summary": "Поиск узких мест в производстве котлов по файлам статуса, этапам и складу.",
+  "triggers": ["производство", "склад", "узкое место", "бутылочное горлышко", "котлы", "этапы"],
+  "dependencies": ["enterprise-collaboration"],
+  "created_at": "2026-04-29",
+  "updated_at": "2026-04-29"
+}

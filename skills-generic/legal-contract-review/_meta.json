@@ -1,0 +1,11 @@
+{
+  "name": "legal-contract-review",
+  "skill_id": "legal-contract-review",
+  "owner": "legal",
+  "status": "active",
+  "summary": "Проверка договоров на риски, соответствие ГК РФ и интересам организации.",
+  "triggers": ["договор", "контракт", "гк рф", "юрист", "правки", "риск"],
+  "dependencies": ["enterprise-collaboration"],
+  "created_at": "2026-04-29",
+  "updated_at": "2026-04-29"
+}

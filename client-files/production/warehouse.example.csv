@@ -1,0 +1,4 @@
+item,quantity_available,quantity_reserved,needed_for_orders,shortage_risk
+valve_dn50,0,0,K-001,high
+sensor_pt100,2,1,K-003,medium
+burner_unit,1,1,K-004,low

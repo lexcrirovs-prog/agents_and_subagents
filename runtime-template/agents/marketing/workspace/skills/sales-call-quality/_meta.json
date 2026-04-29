@@ -1,0 +1,11 @@
+{
+  "name": "sales-call-quality",
+  "skill_id": "sales-call-quality",
+  "owner": "sales-lead",
+  "status": "active",
+  "summary": "Ежедневная оценка звонков отдела продаж по транскриптам и скриптам.",
+  "triggers": ["звонки", "билайн", "транскрибация", "скрипт продаж", "отдел продаж", "рекомендации менеджерам"],
+  "dependencies": ["enterprise-collaboration"],
+  "created_at": "2026-04-29",
+  "updated_at": "2026-04-29"
+}

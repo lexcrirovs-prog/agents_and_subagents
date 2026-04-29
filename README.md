@@ -1,86 +1,61 @@
-# antibiotik-open
+# agents_and_subagents
 
-Чистый, переносимый контур для подписчиков и клиентов.
+Переносимый контур для команды агентов: директор получает задачу от
+пользователя, делегирует ее отделам-субагентам, а отделы решают вопросы между
+собой и возвращают директору уже собранный результат.
 
-Это отдельный проект рядом с исходным private-contour.
-Его задача — собрать обезличенную, устанавливаемую multi-agent систему без
-личных данных исходного оператора, без семейного контекста и без живых
-зависимостей на приватный operational contour.
+Проект построен на `ductor`: Telegram-first runtime, локальные CLI-провайдеры
+Codex/Claude/Gemini, фоновые задачи, cron, webhooks и inter-agent bus.
 
-## Базовые правила
+## Состав команды
 
-- исходный private-contour остаётся нетронутым;
-- этот проект живёт в отдельной директории и не использует private-runtime
-  как live dependency;
-- переносим только generic architecture, generic skills и чистые runtime
-  шаблоны;
-- пользовательские и семейные данные, токены, архивы, логи, daily notes и
-  личные knowledge packs сюда не переносятся.
+- `main` - директор, главный агент и финальный интегратор
+- `marketing` - отдел маркетинга, стиль Telegram/MAX/YouTube/сайта и публикации
+- `legal` - юрист, договоры, ГК РФ и интересы организации
+- `technical-director` - технический директор, NotebookLM/RAG, нормативка и котлы
+- `production` - производство, этапы, склад, скорость и узкие места
+- `sales-lead` - руководитель продаж, звонки Билайн, транскрибация и скрипты
 
 ## Быстрый старт
 
-Основной install path теперь один:
-
 ```bash
 python3 scripts/subscriber_install.py
+python3 scripts/render_agent_templates.py
 ```
 
-Инсталлер сам:
+После установки:
 
-- поднимает `.venv` и ставит зависимости;
-- обновляет public-safe runtime template;
-- определяет локальную авторизацию Codex / Claude;
-- запрашивает токен Telegram-бота;
-- привязывает реальный `owner user id` через одноразовую команду `/pair`;
-- записывает `.env` и `config/config.json`;
-- гоняет strict preflight;
-- поднимает runtime, если не указан `--no-start`.
+1. Скопируйте `runtime-template/agents.example.json` в
+   `runtime-template/agents.json`.
+2. Заполните `allowed_user_ids` для каждого субагента.
+3. Заполните токены ботов в `runtime-template/.env`.
+4. Перезапустите runtime.
 
-Платформенный таргет для v1:
+## Источники данных
 
-- macOS: основной путь;
-- Linux / Linux server: основной путь;
-- Windows: честный baseline сейчас через WSL2, native parity не обещаем до
-  отдельной проверки wrapper/service contour.
+Шаблон не содержит личных данных и токенов. Подключаемые источники описаны в
+`client-files/data-sources.example.json`:
 
-## Архивный артефакт
+- Telegram/MAX exports или API
+- YouTube transcript/export
+- выгрузка сайта или CMS
+- NotebookLM/RAG экспорт для технической базы
+- файл состояния производства котлов
+- Beeline call export
+- локальный путь к `transkrib_prog`
 
-Чтобы собрать отдельную папку для раздачи подписчикам:
+## Ключевые папки
 
-```bash
-python3 scripts/build_subscriber_kit.py
-```
+- `agent-templates/` - манифест ролей субагентов
+- `skills-generic/` - навыки отделов
+- `shared-generic/team/` - правила взаимодействия и отчетности
+- `project-vault-generic/` - архитектура и карточки ролей
+- `runtime-template/` - готовый шаблон локального runtime
+- `client-files/` - примеры структур файлов и подключений
+- `ductor/` - vendored runtime framework
 
-Чтобы сразу получить и папку, и zip-архив:
+## Главный принцип
 
-```bash
-python3 scripts/build_subscriber_kit.py --zip
-```
-
-Готовый артефакт появляется в:
-
-`dist/subscriber-kit`
-
-Архив появляется в:
-
-`dist/subscriber-kit.zip`
-
-Эту папку уже можно архивировать отдельно от рабочего repo-контура.
-
-## Структура
-
-- `docs/README.md` — краткий вход в документацию для handoff/install
-- `docs/internal/` — внутренние engineering notes, не обязательные клиенту
-- `runtime-template/` — чистый шаблон runtime для будущих инсталляций
-- `skills-generic/` — только обезличенные reusable skills
-- `client-files/` — место для клиентских файлов и примеров структуры, не для
-  личных данных оператора
-
-## Текущее состояние
-
-- v1 handoff contour собран;
-- privacy-критичные следы и host-derived runtime leftovers вычищены;
-- installer-first install flow собран вокруг `scripts/subscriber_install.py`;
-- generic team/shared, context hygiene и project-vault seed включены в runtime
-  template;
-- internal engineering notes отделены от клиентского install path.
+Субагент не должен возвращать директору сырой вопрос, если его может решить
+другой отдел. Он консультируется с нужным субагентом, собирает общий вывод и
+только потом возвращает директору статус `DONE`, `PARTIAL` или `BLOCKED`.

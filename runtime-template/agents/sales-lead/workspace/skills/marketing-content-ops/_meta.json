@@ -1,0 +1,11 @@
+{
+  "name": "marketing-content-ops",
+  "skill_id": "marketing-content-ops",
+  "owner": "marketing",
+  "status": "active",
+  "summary": "Анализ стиля и подготовка публикаций для Telegram, MAX, YouTube и сайта.",
+  "triggers": ["пост", "маркетинг", "telegram", "max", "youtube", "сайт", "расписание публикаций"],
+  "dependencies": ["enterprise-collaboration"],
+  "created_at": "2026-04-29",
+  "updated_at": "2026-04-29"
+}

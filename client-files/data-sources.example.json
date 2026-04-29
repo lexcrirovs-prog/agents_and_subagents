@@ -1,0 +1,32 @@
+{
+  "marketing": {
+    "telegram_export_dir": "client-files/marketing/telegram",
+    "max_export_dir": "client-files/marketing/max",
+    "youtube_transcripts_dir": "client-files/marketing/youtube",
+    "site_export_dir": "client-files/marketing/site",
+    "posting_approval_required": true
+  },
+  "legal": {
+    "contracts_dir": "client-files/legal/contracts",
+    "organization_policy_file": "client-files/legal/organization-interests.example.md",
+    "jurisdiction": "Russian Federation",
+    "final_legal_approval_required": true
+  },
+  "technical_director": {
+    "notebooklm_export_dir": "client-files/technical/notebooklm-export",
+    "rag_export_dir": "client-files/technical/rag",
+    "standards_dir": "client-files/technical/standards",
+    "designer_correspondence_dir": "client-files/technical/designer-correspondence",
+    "boiler_configurations_dir": "client-files/technical/boiler-configurations"
+  },
+  "production": {
+    "status_file": "client-files/production/production-status.example.csv",
+    "warehouse_file": "client-files/production/warehouse.example.csv"
+  },
+  "sales": {
+    "beeline_calls_export_dir": "client-files/sales/calls",
+    "transcripts_dir": "client-files/sales/transcripts",
+    "sales_script_file": "client-files/sales/sales-script.example.md",
+    "transkrib_prog_dir": "C:/Users/lexcr/path/to/transkrib_prog"
+  }
+}

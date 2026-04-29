@@ -1,0 +1,4 @@
+order_id,boiler_model,current_stage,stage_started_at,planned_stage_done_at,actual_stage_done_at,owner,configuration_status,warehouse_status,blocker
+K-001,Steam-100,welding,2026-04-20,2026-04-25,,welding_team,complete,missing valve,waiting for valve delivery
+K-002,Steam-150,assembly,2026-04-18,2026-04-24,2026-04-24,assembly_team,complete,ready,no blocker
+K-003,Steam-200,testing,2026-04-22,2026-04-27,,qa_team,incomplete,missing sensor,waiting for sensor approval

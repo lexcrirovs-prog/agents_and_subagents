@@ -1,0 +1,11 @@
+{
+  "name": "enterprise-collaboration",
+  "skill_id": "enterprise-collaboration",
+  "owner": "team",
+  "status": "active",
+  "summary": "Peer-first взаимодействие субагентов и сводный ответ директору.",
+  "triggers": ["согласовать", "уточнить у отдела", "субагент", "директор", "между отделами"],
+  "dependencies": [],
+  "created_at": "2026-04-29",
+  "updated_at": "2026-04-29"
+}
