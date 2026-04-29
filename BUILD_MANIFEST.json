@@ -1,0 +1,35 @@
+{
+  "built_at_utc": "2026-04-22T08:12:13.428839+00:00",
+  "source_repo": "antibiotik-open",
+  "paths": [
+    "README.md",
+    ".gitignore",
+    "docs",
+    "agent-templates",
+    "client-files",
+    "ductor",
+    "project-vault-generic",
+    "runtime-template",
+    "scripts",
+    "shared-generic",
+    "skills-generic"
+  ],
+  "excluded_dirs": [
+    ".git",
+    ".github",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    "__pycache__",
+    "dist",
+    "node_modules"
+  ],
+  "excluded_relative_dirs": [
+    "docs/internal",
+    "ductor/docs",
+    "ductor/tests",
+    "runtime-template/logs",
+    "scripts/__pycache__"
+  ]
+}
