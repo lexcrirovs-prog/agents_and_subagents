@@ -23,6 +23,9 @@ python3 scripts/subscriber_install.py
 python3 scripts/render_agent_templates.py
 ```
 
+Для передачи проекта следующему исполнителю начните с
+[`docs/HANDOFF.md`](docs/HANDOFF.md).
+
 После установки:
 
 1. Скопируйте `runtime-template/agents.example.json` в
